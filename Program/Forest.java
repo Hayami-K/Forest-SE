@@ -1,10 +1,15 @@
+import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.Rectangle;
+import java.util.ArrayList;
+
 public class Forest extends Object {
 
 	private Rectangle bounds;
 
-	private java.util.ArrayList<Branch> branches;
+	private ArrayList<Branch> branches;
 
-	private java.util.ArrayList<Node> nodes;
+	private ArrayList<Node> nodes;
 
 	public void addBranch(Branch aBranch) {
 
@@ -18,7 +23,7 @@ public class Forest extends Object {
 
 	}
 
-	protected Point arrange(Node aNode, Point aPoint, Model aModel) {
+	protected Point arrange(Node aNode, Point aPoint, ForestModel aModel) {
 		return null;
 	}
 
@@ -34,7 +39,7 @@ public class Forest extends Object {
 
 	}
 
-	protected void propagate(Model aModel) {
+	protected void propagate(ForestModel aModel) {
 
 	}
 

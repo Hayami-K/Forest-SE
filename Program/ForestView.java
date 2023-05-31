@@ -1,8 +1,12 @@
-public class View extends JPanel {
+import javax.swing.JPanel;
+import java.awt.Point;
+import java.awt.Graphics;
 
-	private Controller controller;
+public class ForestView extends JPanel {
 
-	private Model model;
+	private ForestController controller;
+
+	private ForestModel model;
 
 	private Point offset;
 

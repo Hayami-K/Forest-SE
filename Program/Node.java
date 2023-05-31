@@ -1,3 +1,8 @@
+import java.awt.Component;
+import java.awt.Point;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+
 public class Node extends Component {
 
 	private Point extent;

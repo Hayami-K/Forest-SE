@@ -1,12 +1,19 @@
-public class Controller extends MouseAdapter, MouseInputAdapter {
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseWheelListener;
+import java.awt.Point;
+
+import javax.swing.event.MouseInputAdapter;
+
+public class ForestController extends javax.swing.event.MouseInputAdapter
+		implements java.awt.event.MouseWheelListener {
 
 	private Point current;
 
-	private Model model;
+	private ForestModel model;
 
 	private Point previous;
 
-	private View view;
+	private ForestView view;
 
 	public void mouseClicked(MouseEvent aMouseEvent) {
 
@@ -40,11 +47,11 @@ public class Controller extends MouseAdapter, MouseInputAdapter {
 
 	}
 
-	public void setModel(Model aModel) {
+	public void setModel(ForestModel aModel) {
 
 	}
 
-	public void setView(View aView) {
+	public void setView(ForestView aView) {
 
 	}
 

@@ -1,6 +1,6 @@
-public class Model extends Object {
+public class ForestModel extends Object {
 
-	private java.util.ArrayList<View> dependents;
+	private java.util.ArrayList<ForestView> dependents;
 
 	private Forest forest;
 
@@ -10,7 +10,7 @@ public class Model extends Object {
 
 	}
 
-	public void addDependent(View aView) {
+	public void addDependent(ForestView aView) {
 
 	}
 
@@ -30,7 +30,7 @@ public class Model extends Object {
 		return null;
 	}
 
-	public void read(File aFile) {
+	public void read(java.io.File aFile) {
 
 	}
 
@@ -38,11 +38,11 @@ public class Model extends Object {
 		return null;
 	}
 
-	public String toString() {
+	public java.lang.String toString() {
 		return null;
 	}
 
-	public ArrayList<Node> roots() {
+	public java.util.ArrayList<Node> roots() {
 		return null;
 	}
 

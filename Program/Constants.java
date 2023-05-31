@@ -1,3 +1,5 @@
+import java.awt.Point;
+
 public class Constants extends Object {
 
 	public java.awt.Color BackgroundColor;
