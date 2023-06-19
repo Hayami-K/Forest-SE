@@ -5,64 +5,129 @@ import java.awt.Rectangle;
 
 public class Node extends Component {
 
-	private Point extent;
+    private Point extent;
 
-	private Point location;
+    private Point location;
 
-	private String name;
+    private String name;
 
-	private Integer status;
+    private Integer status;
 
-	public void draw(Graphics aGraphics) {
+    /**
+     * ノードを描画するメソッドです
+     * 
+     * @param aGraphics
+     */
+    public void draw(Graphics aGraphics) {
 
-	}
+    }
 
-	public Rectangle getBounds() {
-		return null;
-	}
+    /**
+     * ノードの描画領域を応答するメソッドです
+     * 
+     * @return
+     */
+    public Rectangle getBounds() {
+        return null;
+    }
 
-	public Point getExtent() {
-		return null;
-	}
+    /**
+     * ノードの大きさを応答するメソッドです
+     * 
+     * @return
+     */
+    public Point getExtent() {
+        return null;
+    }
 
-	public Point getLocation() {
-		return null;
-	}
+    /**
+     * ノードの位置を応答するメソッドです
+     * 
+     * @return
+     */
+    public Point getLocation() {
+        return null;
+    }
 
-	public String getName() {
-		return null;
-	}
+    /**
+     * ノードの名前を応答するメソッドです
+     * 
+     * @return
+     */
+    public String getName() {
+        return null;
+    }
 
-	public Integer getStatus() {
-		return null;
-	}
+    /**
+     * ノードの状態を応答するメソッドです
+     * 
+     * @return
+     */
+    public Integer getStatus() {
+        return null;
+    }
 
-	public void setExtent(Point aPoint) {
+    /**
+     * ノードの大きさを設定するメソッドです
+     * 
+     * @param aPoint
+     */
+    public void setExtent(Point aPoint) {
 
-	}
+    }
 
-	public void setLocation(Point aPoint) {
+    /**
+     * ノードの位置を設定するメソッドです
+     * 
+     * @param aPoint
+     *
+     */
+    public void setLocation(Point aPoint) {
 
-	}
+    }
 
-	public void setName(String aString) {
+    /**
+     * ノードの名前を設定するメソッドです
+     * @param aString
+     *
+     */
+    public void setName(String aString) {
 
-	}
+    }
 
-	public void setStatus(Integer anInteger) {
+    /**
+     * ノードの状態を設定するメソッドです
+     * @param anInteger
+     */
+    public void setStatus(Integer anInteger) {
 
-	}
+    }
 
-	protected int stringHeight(String string) {
-		return 0;
-	}
+    /**
+     * 文字列の高さを応答するメソッドです
+     * @param string
+     * @return
+     */
+    protected int stringHeight(String string) {
+        return 0;
+    }
 
-	protected int stringWidth(String string) {
-		return 0;
-	}
+    /**
+     * 文字列の幅を応答するメソッドです
+     * @param string
+     * @return
+     */
+    protected int stringWidth(String string) {
+        return 0;
+    }
 
-	public String toString() {
-		return null;
-	}
+    /**
+     * 自分自身を文字列に変換するメソッドです
+     * 
+     * @return
+     */
+    public String toString() {
+        return null;
+    }
 
 }

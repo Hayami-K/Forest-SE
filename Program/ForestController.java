@@ -5,58 +5,112 @@ import java.awt.Point;
 import javax.swing.event.MouseInputAdapter;
 
 public class ForestController extends javax.swing.event.MouseInputAdapter
-		implements java.awt.event.MouseWheelListener {
+        implements java.awt.event.MouseWheelListener {
 
-	private Point current;
+    private Point current;
 
-	private ForestModel model;
+    private ForestModel model;
 
-	private Point previous;
+    private Point previous;
 
-	private ForestView view;
+    private ForestView view;
 
-	public void mouseClicked(MouseEvent aMouseEvent) {
+    /**
+     * マウスのボタンをクリックしたときに動作するメソッドです。 クリックした位置からノードを割り出します
+     * 
+     * @param aMouseEvent
+     */
+    public void mouseClicked(MouseEvent aMouseEvent) {
 
-	}
+    }
 
-	public void mouseDragged(MouseEvent aMouseEvent) {
+    /**
+     * マウスドラッグしたときに動作するメソッドです
+     * 直近の位置と現在の位置から移動量を割り出してスクロールします
+     * 
+     * @param aMouseEvent
+     */
+    public void mouseDragged(MouseEvent aMouseEvent) {
 
-	}
+    }
 
-	public void mouseEntered(MouseEvent aMouseEvent) {
+    /**
+     * マウスがウィンドウに入ったときに操作するメソッドです
+     * 
+     * @param aMouseEvent
+     */
+    public void mouseEntered(MouseEvent aMouseEvent) {
 
-	}
+    }
 
-	public void mouseMoved(MouseEvent aMouseEvent) {
+    /**
+     * マウスがウィンドウに出たときに動作するメソッドです
+     * 
+     * @param aMouseEvent
+     */
+    public void mouseMoved(MouseEvent aMouseEvent) {
 
-	}
+    }
 
-	public void mousePressed(MouseEvent aMouseEvent) {
+    /**
+     * マウスのボタンが押されたときに動作するメソッドです
+     * 
+     * @param aMouseEvent
+     */
+    public void mousePressed(MouseEvent aMouseEvent) {
 
-	}
+    }
 
-	public void mouseReleased(MouseEvent aMouseEvent) {
+    /**
+     * マウスのボタンが離されたときに操作するメソッドです
+     * 
+     * @param aMouseEvent
+     */
+    public void mouseReleased(MouseEvent aMouseEvent) {
 
-	}
+    }
 
-	public void mouseWheelMoved(MouseEvent aMouseEvent) {
+    /**
+     * マウスのホイールが回されたときに動作するメソッドです
+     * 
+     * @param aMouseEvent
+     */
+    public void mouseWheelMoved(MouseEvent aMouseEvent) {
 
-	}
+    }
 
-	public void mouseExited(MouseEvent aMouseEvent) {
+    /**
+     * マウスがウィンドウに出たときに動作するメソッドです
+     * 
+     * @param aMouseEvent
+     */
+    public void mouseExited(MouseEvent aMouseEvent) {
 
-	}
+    }
 
-	public void setModel(ForestModel aModel) {
+    /**
+     * モデルを設定するメソッドです
+     * 
+     * @param aModel
+     */
+    public void setModel(ForestModel aModel) {
 
-	}
+    }
 
-	public void setView(ForestView aView) {
+    /**
+     * ビューをセットするメソッドです
+     * 
+     * @param aView
+     */
+    public void setView(ForestView aView) {
 
-	}
+    }
 
-	public String toString() {
-		return null;
-	}
+    /**
+     * 自分自身を文字列に変換するメソッドです
+     */
+    public String toString() {
+        return null;
+    }
 
 }
