@@ -1,38 +1,76 @@
 package forest;
 
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 import condition.Condition;
 
-/**
- * 樹状整列の例題クラス：使い方の典型を示すのが目的のプログラムです。<br>
- * Makefileを用いた実行方法は以下の通りです。<br>
- * $ make tree  # 木を整列描画<br>
- * $ make forest  # 森を整列描画<br>
- * $ make semilattice  # 亜格子状の森を整列描画<br>
- */
-public class Example extends Object
-{
-	/**
-	 * 第1引数で樹状整列データファイルを受け取って樹状整列を実行します。<br>
-	 * $ java -Dfile.encoding=UTF-8 -Xmx512m -Xss1024k -jar forest.jar resource/data/tree.txt<br>
-	 * $ java -Dfile.encoding=UTF-8 -Xmx512m -Xss1024k -jar forest.jar resource/data/forest.txt<br>
-	 * $ java -Dfile.encoding=UTF-8 -Xmx512m -Xss1024k -jar forest.jar resource/data/semilattice.txt<br>
-	 * @param arguments 樹状整列データファイルを第1引数とする引数文字列群
-	 */
-	public static void main(String[] arguments)
-	{
-		// 引数が無い（樹状整列データファイルの在り処がわからない）をチェックする。
+public class Example {
+    // ファイルパスを予め設定
+    private static String filePath1 = "resources/data/tree.txt";
+    private static String filePath2 = "resources/data/forest.txt";
+    private static String filePath3 = "resources/data/semilattice.txt";
+
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("File Selector");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            // ボタン1
+            JButton button1 = new JButton("Run with preset file 1");
+            button1.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    runForestModel(filePath1);
+                }
+            });
+
+            // ボタン2
+            JButton button2 = new JButton("Run with preset file 2");
+            button2.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    runForestModel(filePath2);
+                }
+            });
+
+            JButton button3 = new JButton("Run with preset file 3");
+            button3.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    runForestModel(filePath3);
+                }
+            });
+
+            // レイアウトを設定し、ボタンを追加
+            frame.setLayout(new FlowLayout());
+            frame.getContentPane().add(button1);
+            frame.getContentPane().add(button2);
+            frame.getContentPane().add(button3);
+
+            frame.setSize(300, 200);
+            frame.setVisible(true);
+        });
+    }
+
+    public static void runForestModel(String aFilePass) {
+    /*// 引数が無い（樹状整列データファイルの在り処がわからない）をチェックする。
 		new Condition(() -> arguments.length < 1).ifTrue(() ->
 		{
 			System.err.println("There are too few arguments.");
 			System.exit(1);
-		});
+		});*/
 
 		// 第1引数で指定された樹状整列データファイルの存在をチェックする。
-		File aFile = new File(arguments[0]);
+		File aFile = new File(aFilePass);
 		new Condition(() -> !(aFile.exists())).ifTrue(() ->
 		{
 			System.err.println("'" + aFile + "' does not exist.");
@@ -47,14 +85,14 @@ public class Example extends Object
 		JFrame aWindow = new JFrame(aFile.getName());
 		aWindow.getContentPane().add(aView);
 		aWindow.setMinimumSize(new Dimension(400, 300));
-		aWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		aWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		aWindow.setSize(800, 600);
 		aWindow.setLocationRelativeTo(null);
 		aWindow.setVisible(true);
 
 		// 樹状整列のアニメーションを行う。
-		aModel.animate();
+        new Thread(() -> aModel.animate()).start();
 
 		return;
-	}
+    }
 }

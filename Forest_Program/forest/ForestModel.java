@@ -11,26 +11,32 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import mvc.Model;
 import mvc.View;
 import condition.Condition;
 import condition.ValueHolder;
 
-public class ForestModel extends mvc.Model{
-  /**
-   * 樹上整列自身を記憶する
-   */
-  private Forest forest;
+/**
+ * 樹状整列におけるMVCのモデル（M）を担うクラスになります。
+ * 作者：青木淳（AOKI Atsushi）
+ * 修正日（作成日）：2022-07-08（2008-11-11）
+ */
+public class ForestModel extends Model
+{
+	/**
+	 * 樹状整列それ自身を記憶しておくフィールドです。
+	 */
+	private Forest forest;
 
-  /**
-   * このクラスのインスタンスを生成するコンストラクタ
-   * @param aFile 樹状整列データファイル
-   */
-  public ForestModel(File aFile){
-    super();
+	/**
+	 * このクラスのインスタンスを生成するコンストラクタです。
+	 * @param aFile 樹状整列データファイル
+	 */
+	public ForestModel(File aFile)
+	{
+		super();
 
-    // フォレストのインスタンスを生成して保持し、樹状整列データファイルを読み込んで、樹状整列させる。
+		// フォレストのインスタンスを生成して保持し、樹状整列データファイルを読み込んで、樹状整列させる。
 		this.forest = new Forest();
 		ValueHolder<BufferedReader> readStream = new ValueHolder<BufferedReader>(null);
 		try
@@ -58,31 +64,33 @@ public class ForestModel extends mvc.Model{
 		this.arrange();
 
 		return;
-  }
+	}
 
-  /**
-   * アニメーションを行うメソッド
-   */
-  public void animate(){
-    // フォレストの樹状整列に自分を引数で渡すので、propagateによりアニメーションが行われる。
+	/**
+	 * アニメーションを行うメソッドです。
+	 */
+	public void animate()
+	{
+		// フォレストの樹状整列に自分を引数で渡すので、propagateによりアニメーションが行われる。
 		this.forest.arrange(this);
 		this.changed();
 
 		return;
-  }
+	}
 
-  /**
-   * 樹状整列を行うメソッド
-   */
-  public void arrange(){
-    // フォレストの樹状整列に引数無なので、アニメーションは行われない。
+	/**
+	 * 樹状整列を行うメソッドです。
+	 */
+	public void arrange()
+	{
+		// フォレストの樹状整列に引数無しですので、アニメーションは行われない。
 		this.forest.arrange();
 		this.changed();
 
 		return;
-  }
+	}
 
-  /**
+	/**
 	 * 自分自身が変化したことを依存物たちに放送（updateを依頼）するメソッドです。
 	 */
 	@Override
@@ -106,25 +114,26 @@ public class ForestModel extends mvc.Model{
 		return;
 	}
 
-  /**
-   * 樹状整列それ自身を応答するメソッド
-   * @return 樹状整列それ自身
-   */
-  public Forest forest(){
-    return this.forest;
-  }
+	/**
+	 * 樹状整列それ自身を応答するメソッドです。
+	 * @return 樹状整列それ自身
+	 */
+	public Forest forest()
+	{
+		return this.forest;
+	}
 
-  /**
-   * 樹状整列データファイルから樹状整列それ自身を生成するメソッド
-   * @param readStream 樹状整列データファイル
-   */
-  protected void read(BufferedReader readStream){
-    // 樹状整列データファイルを読み込んで、ツリー（木）たち、ノード（節）たち、ブランチ（枝）たち、を割り出す。
+	/**
+	 * 樹状整列データファイルから樹状整列それ自身を生成するメソッドです。
+	 * @param readStream 樹状整列データファイルストリーム
+	 */
+	protected void read(BufferedReader readStream)
+	{
+		// 樹状整列データファイルを読み込んで、ツリー（木）たち、ノード（節）たち、ブランチ（枝）たち、を割り出す。
 		List<String> trees = new ArrayList<String>();
 		List<String> nodes = new ArrayList<String>();
 		List<String> branches = new ArrayList<String>();
 		ValueHolder<String> string = new ValueHolder<String>(null);
-
 		new Condition(() ->
 		{
 			string.set(this.readLine(readStream));
@@ -188,7 +197,21 @@ public class ForestModel extends mvc.Model{
 			});
 		});
 
-  }
+		// ブランチたちを生成して登録する。
+		branches.forEach((String aString) ->
+		{
+			String[] stringArray = aString.split(", ");
+			new Condition(() -> stringArray.length == 2).ifTrue(() ->
+			{
+				Node fromNode = nodeArray[Integer.parseInt(stringArray[0]) - 1];
+				Node toNode = nodeArray[Integer.parseInt(stringArray[1]) - 1];
+				Branch aBranch = new Branch(fromNode, toNode);
+				this.forest.addBranch(aBranch);
+			});
+		});
+
+		return;
+	}
 
 	/**
 	 * 樹状整列データファイルストリームから一行分を読み出して応答するメソッドです。
@@ -208,21 +231,23 @@ public class ForestModel extends mvc.Model{
 		return aString;
 	}
 
-  /**
-   * 樹状整列の根元（ルート）になるノードを探し出して応答するメソッド
-   * @return ルートノード、ただし、見つからないときはnull
-   */
-  public Node root(){
-    List<Node> roots = this.roots();
+	/**
+	 * 樹状整列の根元（ルート）になるノードを探し出して応答するメソッドです。
+	 * @return ルートノード、ただし、見つからないときはnull
+	 */
+	public Node root()
+	{
+		List<Node> roots = this.roots();
 
 		return (roots.size() > 0) ? (roots.get(0)) : (null);
-  }
+	}
 
-  /**
-   * 樹状整列の根元（ルート）になるノードたちを探し出して応答するメソッド
-   * @return ルートノードたち、ただし、見つからないときは空リスト
-   */
-  public ArrayList<Node> roots(){
-    return this.forest().rootNodes();
-  }
+	/**
+	 * 樹状整列の根元（ルート）になるノードたちを探し出して応答するメソッドです。
+	 * @return ルートノードたち、ただし、見つからないときは空リスト
+	 */
+	public List<Node> roots()
+	{
+		return this.forest().rootNodes();
+	}
 }

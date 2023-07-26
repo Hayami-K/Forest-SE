@@ -2,15 +2,20 @@ package forest;
 
 import java.awt.Point;
 import java.awt.event.MouseEvent;
-import javax.swing.JOptionPane;
 
+import javax.swing.JOptionPane;
 
 import condition.Condition;
 import mvc.Controller;
 
-public class ForestController extends mvc.Controller{
-  
-  /**
+/**
+ * 樹状整列におけるMVCのコントローラ（C）を担うクラスになります。
+ * 作者：青木淳（AOKI Atsushi）
+ * 修正日（作成日）：2022-07-08（2008-11-11）
+ */
+public class ForestController extends Controller
+{
+	/**
 	 * このクラスのインスタンスを生成するコンストラクタです。
 	 */
 	public ForestController()
@@ -19,15 +24,17 @@ public class ForestController extends mvc.Controller{
 
 		return;
 	}
-  /**
-   * マウスのボタンをクリックしたときに動作するメソッド
-   * クリックした位置からノードを割り出す
-   * @param aMouseEvent
-   */
-  @Override
-  public void mouseClicked(MouseEvent aMouseEvent){
-    // イベントからクリック座標を取得し、その座標にノードがあるかを調べる。
-    Point aPoint = aMouseEvent.getPoint();
+
+	/**
+	 * マウスのボタンをクリックしたときに動作するメソッドです。
+	 * クリックした位置からノードを割り出します。
+	 * @param aMouseEvent マウスイベント
+	 */
+	@Override
+	public void mouseClicked(MouseEvent aMouseEvent)
+	{
+		// イベントからクリック座標を取得し、その座標にノードがあるかを調べる。
+		Point aPoint = aMouseEvent.getPoint();
 		System.out.println(aPoint);
 		Node aNode = ((ForestView)this.view).whichOfNodes(aPoint);
 
@@ -41,6 +48,6 @@ public class ForestController extends mvc.Controller{
 			                              JOptionPane.INFORMATION_MESSAGE);
 		});
 
-    return;
-  }
+		return;
+	}
 }
