@@ -1,9 +1,10 @@
 package forest;
 
 import java.awt.Dimension;
-import java.awt.Point;
 import java.io.File;
 import javax.swing.JFrame;
+
+import condition.Condition;
 
 /**
  * 樹状整列の例題クラス：使い方の典型を示すのが目的のプログラムです。<br>
@@ -24,23 +25,21 @@ public class Example extends Object
 	public static void main(String[] arguments)
 	{
 		// 引数が無い（樹状整列データファイルの在り処がわからない）をチェックする。
-		if (arguments.length < 1)
+		new Condition(() -> arguments.length < 1).ifTrue(() ->
 		{
 			System.err.println("There are too few arguments.");
 			System.exit(1);
-		}
+		});
 
 		// 第1引数で指定された樹状整列データファイルの存在をチェックする。
 		File aFile = new File(arguments[0]);
-		if (!(aFile.exists()))
+		new Condition(() -> !(aFile.exists())).ifTrue(() ->
 		{
 			System.err.println("'" + aFile + "' does not exist.");
 			System.exit(1);
-		}
+		});
 
-		/**********
-
-		 // MVCを作成する。
+		// MVCを作成する。
 		ForestModel aModel = new ForestModel(aFile);
 		ForestView aView = new ForestView(aModel);
 
@@ -55,8 +54,6 @@ public class Example extends Object
 
 		// 樹状整列のアニメーションを行う。
 		aModel.animate();
-
-		**********/
 
 		return;
 	}

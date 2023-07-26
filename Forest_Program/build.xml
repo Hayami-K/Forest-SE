@@ -8,7 +8,7 @@
 	<property name="destdir" value="./Classes" />
 	<property name="docdir" value="./JavaDoc" />
 	<property name="instdir" value="./${ant.project.name}.app/Contents/Resources/Java" />
-	<property name="copyright" value="Copyright 2008-2017 AOKI Atsushi. All Rights Reserved." />
+	<property name="copyright" value="Copyright 2008-2020 AOKI Atsushi. All Rights Reserved." />
 	<property name="zipname" value="${ant.project.name}" />
 
 	<target name="all" depends="jar" description="build all">
@@ -67,28 +67,28 @@
 
 	<target name="tree" depends="all" description="tree">
 		<exec executable="java" spawn="false">
-			<arg line="-Dfile.encoding=UTF-8 -Xmx512m -Xss1024k -jar ${package}.jar resource/data/tree.txt" />
+			<arg line="-Dfile.encoding=UTF-8 -Xmx512m -Xss1024k -jar ${package}.jar resources/data/tree.txt" />
 		</exec>
 		<exec executable="date" spawn="false" />
 	</target>
 
 	<target name="forest" depends="all" description="forest">
 		<exec executable="java" spawn="false">
-			<arg line="-Dfile.encoding=UTF-8 -Xmx512m -Xss1024k -jar ${package}.jar resource/data/forest.txt" />
+			<arg line="-Dfile.encoding=UTF-8 -Xmx512m -Xss1024k -jar ${package}.jar resources/data/forest.txt" />
 		</exec>
 		<exec executable="date" spawn="false" />
 	</target>
 
 	<target name="semilattice" depends="all" description="semilattice">
 		<exec executable="java" spawn="false">
-			<arg line="-Dfile.encoding=UTF-8 -Xmx512m -Xss1024k -jar ${package}.jar resource/data/semilattice.txt" />
+			<arg line="-Dfile.encoding=UTF-8 -Xmx512m -Xss1024k -jar ${package}.jar resources/data/semilattice.txt" />
 		</exec>
 		<exec executable="date" spawn="false" />
 	</target>
 
 	<target name="install" depends="all" description="install into application">
 		<copy file="${package}.jar" todir="${instdir}" />
-		<copy file="resource/data/forest.txt" todir="${instdir}" />
+		<copy file="resources/data/forest.txt" todir="${instdir}" />
 		<exec executable="chmod">
 			<arg line="755 ${instdir}/../../MacOS/applet" />
 		</exec>
@@ -108,7 +108,7 @@
 			encoding="UTF-8"
 			docencoding="UTF-8"
 			linksource="yes"
-			additionalparam="-J-Dfile.encoding=UTF-8"
+			additionalparam="-J-Dfile.encoding=UTF-8 -Xdoclint:all"
 			access="private">
 			<doctitle>${doc-title}</doctitle>
 			<bottom>${copyright}</bottom>
@@ -118,7 +118,7 @@
 			</classpath>
 		</javadoc>
 		<exec executable="open">
-			<arg line="-a /Applications/Safari.app ${docdir}/index.html" />
+			<arg line="-a 'Safari' ${docdir}/index.html" />
 		</exec>
 		<exec executable="date" spawn="false" />
 	</target>

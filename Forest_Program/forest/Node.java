@@ -39,7 +39,20 @@ public class Node extends Component
 	 * @param aString ノード名：ラベル文字列
 	 */
 	public Node(String aString){
+		super();
 
+		this.setName(aString);
+		this.setLocation(new Point(0, 0));
+
+		// ノード名のラベル文字列のフォントフォント情報から幅と高さを計算する。
+		Integer width = this.stringWidth(this.name) + (Constants.Margin.x * 2);
+		Integer height = this.stringHeight(this.name) + (Constants.Margin.y * 2);
+		this.setExtent(new Point(width, height));
+
+		// 樹状整列のノードのステータス（状態）を未定として初期化する。
+		this.setStatus(Constants.UnKnown);
+
+		return;
 	}
 
 	/**
@@ -47,7 +60,24 @@ public class Node extends Component
 	 * @param aGraphics グラフィクス（描画コンテクスト）
 	 */
 	public void draw(Graphics aGraphics){
+		Graphics2D aGraphics2D = (Graphics2D)aGraphics;
+		aGraphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		aGraphics2D.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
 
+		// ノード（節）の枠縁を描き出す。
+		aGraphics.setColor(Constants.ForegroundColor);
+		aGraphics.drawRect(this.location.x, this.location.y, this.extent.x - 1, this.extent.y - 1);
+
+		// ノード（節）の名前（ラベル）を描き出すための座標を計算する。
+		String aString = this.getName();
+		Point aPoint = (this.getBounds()).getLocation();
+		aPoint.translate(Constants.Margin.x, this.extent.y - Constants.Margin.y - 2);
+
+		// ノード（節）の名前（ラベル）を描き出す。
+		aGraphics.setFont(Constants.DefaultFont);
+		aGraphics.drawString(aString, aPoint.x, aPoint.y) ;
+
+		return;
 	}
 
 	/**
@@ -56,7 +86,9 @@ public class Node extends Component
 	 */
 	@Override
 	public Rectangle getBounds(){
-		return null;
+		Rectangle aRectangle = new Rectangle(this.location.x, this.location.y, this.extent.x, this.extent.y);
+
+		return aRectangle;
 	}
 
 
@@ -137,7 +169,7 @@ public class Node extends Component
 	 * @return 文字列の高さ
 	 */
 	protected int stringHeight(String string){
-		return null;
+		return Constants.DefaultFont.getSize();
 	}
 
 
@@ -147,7 +179,9 @@ public class Node extends Component
 	 * @return 文字列の幅
 	 */
 	protected int stringWidth(String string){
-		return null;
+		FontMetrics fontMetrics = this.getFontMetrics(Constants.DefaultFont);
+
+		return SwingUtilities.computeStringWidth(fontMetrics, string);
 	}
 
 
