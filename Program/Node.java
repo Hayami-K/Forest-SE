@@ -19,7 +19,7 @@ public class Node extends Component {
      * @param aGraphics
      */
     public void draw(Graphics aGraphics) {
-
+        
     }
 
     /**
@@ -88,7 +88,10 @@ public class Node extends Component {
 
     /**
      * ノードの名前を設定するメソッドです
+<<<<<<< HEAD
      * 
+=======
+>>>>>>> ce598c700880ff52169668895f8e907de238649f
      * @param aString
      *
      */
@@ -98,7 +101,10 @@ public class Node extends Component {
 
     /**
      * ノードの状態を設定するメソッドです
+<<<<<<< HEAD
      * 
+=======
+>>>>>>> ce598c700880ff52169668895f8e907de238649f
      * @param anInteger
      */
     public void setStatus(Integer anInteger) {
@@ -107,7 +113,10 @@ public class Node extends Component {
 
     /**
      * 文字列の高さを応答するメソッドです
+<<<<<<< HEAD
      * 
+=======
+>>>>>>> ce598c700880ff52169668895f8e907de238649f
      * @param string
      * @return
      */
@@ -117,7 +126,10 @@ public class Node extends Component {
 
     /**
      * 文字列の幅を応答するメソッドです
+<<<<<<< HEAD
      * 
+=======
+>>>>>>> ce598c700880ff52169668895f8e907de238649f
      * @param string
      * @return
      */

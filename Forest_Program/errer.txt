@@ -1,0 +1,298 @@
+compile:
+    [javac] Compiling 8 source files to /Users/hayamikenmori/PP/Forest-SE/Forest_Program/Classes
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Example.java:7: エラー: パッケージconditionは存在しません
+    [javac] import condition.Condition;
+    [javac]                 ^
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:9: エラー: パッケージconditionは存在しません
+    [javac] import condition.Condition;
+    [javac]                 ^
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:10: エラー: パッケージconditionは存在しません
+    [javac] import condition.ValueHolder;
+    [javac]                 ^
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:72: エラー: シンボルを見つけられません
+    [javac]   public void arrange(Model aModel){
+    [javac]                       ^
+    [javac]   シンボル:   クラス Model
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:102: エラー: シンボルを見つけられません
+    [javac]   public Point arrange(Node aNode, Point aPoint, Model aModel){
+    [javac]                                                  ^
+    [javac]   シンボル:   クラス Model
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:150: エラー: シンボルを見つけられません
+    [javac]   protected void propagate(Model aModel){
+    [javac]                            ^
+    [javac]   シンボル:   クラス Model
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestController.java:8: エラー: パッケージconditionは存在しません
+    [javac] import condition.Condition;
+    [javac]                 ^
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:16: エラー: パッケージconditionは存在しません
+    [javac] import condition.Condition;
+    [javac]                 ^
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:17: エラー: パッケージconditionは存在しません
+    [javac] import condition.ValueHolder;
+    [javac]                 ^
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestView.java:8: エラー: パッケージconditionは存在しません
+    [javac] import condition.Condition;
+    [javac]                 ^
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Node.java:48: エラー: シンボルを見つけられません
+    [javac] 		Integer width = this.stringWidth(this.name) + (Constants.Margin.x * 2);
+    [javac] 		                                                        ^
+    [javac]   シンボル:   変数 Margin
+    [javac]   場所: クラス Constants
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Node.java:49: エラー: シンボルを見つけられません
+    [javac] 		Integer height = this.stringHeight(this.name) + (Constants.Margin.y * 2);
+    [javac] 		                                                          ^
+    [javac]   シンボル:   変数 Margin
+    [javac]   場所: クラス Constants
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Node.java:74: エラー: シンボルを見つけられません
+    [javac] 		aPoint.translate(Constants.Margin.x, this.extent.y - Constants.Margin.y - 2);
+    [javac] 		                          ^
+    [javac]   シンボル:   変数 Margin
+    [javac]   場所: クラス Constants
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Node.java:74: エラー: シンボルを見つけられません
+    [javac] 		aPoint.translate(Constants.Margin.x, this.extent.y - Constants.Margin.y - 2);
+    [javac] 		                                                              ^
+    [javac]   シンボル:   変数 Margin
+    [javac]   場所: クラス Constants
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Node.java:77: エラー: シンボルを見つけられません
+    [javac] 		aGraphics.setFont(Constants.DefaultFont);
+    [javac] 		                           ^
+    [javac]   シンボル:   変数 DefaultFont
+    [javac]   場所: クラス Constants
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Node.java:172: エラー: シンボルを見つけられません
+    [javac] 		return Constants.DefaultFont.getSize();
+    [javac] 		                ^
+    [javac]   シンボル:   変数 DefaultFont
+    [javac]   場所: クラス Constants
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Node.java:182: エラー: シンボルを見つけられません
+    [javac] 		FontMetrics fontMetrics = this.getFontMetrics(Constants.DefaultFont);
+    [javac] 		                                                       ^
+    [javac]   シンボル:   変数 DefaultFont
+    [javac]   場所: クラス Constants
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Example.java:28: エラー: シンボルを見つけられません
+    [javac] 		new Condition(() -> arguments.length < 1).ifTrue(() ->
+    [javac] 		    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Example
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Example.java:36: エラー: シンボルを見つけられません
+    [javac] 		new Condition(() -> !(aFile.exists())).ifTrue(() ->
+    [javac] 		    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Example
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:73: エラー: シンボルを見つけられません
+    [javac]     Integer fontHeight = Constants.DefaultFont.getSize();
+    [javac]                                   ^
+    [javac]   シンボル:   変数 DefaultFont
+    [javac]   場所: クラス Constants
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:74: エラー: シンボルを見つけられません
+    [javac] 		Integer yValue = fontHeight + (Constants.Margin.y * 2) + Constants.Interval.y;
+    [javac] 		                                        ^
+    [javac]   シンボル:   変数 Margin
+    [javac]   場所: クラス Constants
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:76: エラー: シンボルを見つけられません
+    [javac] 		ValueHolder<Integer> anIndex = new ValueHolder<Integer>(0);
+    [javac] 		^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:76: エラー: シンボルを見つけられません
+    [javac] 		ValueHolder<Integer> anIndex = new ValueHolder<Integer>(0);
+    [javac] 		                                   ^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:83: エラー: シンボルを見つけられません
+    [javac] 		ValueHolder<Point> aPoint = new ValueHolder<Point>(new Point(0, 0));
+    [javac] 		^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:83: エラー: シンボルを見つけられません
+    [javac] 		ValueHolder<Point> aPoint = new ValueHolder<Point>(new Point(0, 0));
+    [javac] 		                                ^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:112: エラー: シンボルを見つけられません
+    [javac]     new Condition(() -> this.bounds == null).ifTrue(() ->{
+    [javac]         ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:114: エラー: シンボルを見つけられません
+    [javac]       ValueHolder<Integer> anIndex = new ValueHolder<Integer>(0);
+    [javac]       ^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:114: エラー: シンボルを見つけられません
+    [javac]       ValueHolder<Integer> anIndex = new ValueHolder<Integer>(0);
+    [javac]                                          ^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:151: エラー: シンボルを見つけられません
+    [javac]     new Condition(() -> !(aModel == null)).ifTrue(() -> {
+    [javac]         ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:152: エラー: シンボルを見つけられません
+    [javac]       try {Tread.sleep(Constants.SleepTick);}
+    [javac]            ^
+    [javac]   シンボル:   変数 Tread
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:153: エラー: シンボルを見つけられません
+    [javac]       catch(InterrptedException anException){ ; }
+    [javac]             ^
+    [javac]   シンボル:   クラス InterrptedException
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:168: エラー: シンボルを見つけられません
+    [javac]       new Condition(() -> this.superNodes(aNode).size() == 0).ifTrue(() -> {rootNodes.add(aNode);});
+    [javac]           ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:170: エラー: 不適合な型: List<Node>をArrayList<Node>に変換できません:
+    [javac]     return this.sortNodes(rootNodes);
+    [javac]                          ^
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:179: エラー: シンボルを見つけられません
+    [javac]     ValueHolder<Integer> i = new ValueHolder<Integer>(0);
+    [javac]     ^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:179: エラー: シンボルを見つけられません
+    [javac]     ValueHolder<Integer> i = new ValueHolder<Integer>(0);
+    [javac]                                  ^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:180: エラー: シンボルを見つけられません
+    [javac] 		new Condition(() -> i.get() < (nodeCollection.size() - 1)).whileTrue(() ->
+    [javac] 		    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:182: エラー: シンボルを見つけられません
+    [javac] 			ValueHolder<Integer> j = new ValueHolder<Integer>(nodeCollection.size() - 1);
+    [javac] 			^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:182: エラー: シンボルを見つけられません
+    [javac] 			ValueHolder<Integer> j = new ValueHolder<Integer>(nodeCollection.size() - 1);
+    [javac] 			                             ^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:183: エラー: シンボルを見つけられません
+    [javac] 			new Condition(() -> j.get() > i.get()).whileTrue(() ->
+    [javac] 			    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:187: エラー: シンボルを見つけられません
+    [javac] 				new Condition(() -> (current.getName()).compareTo(previous.getName()) < 0).ifTrue(() ->
+    [javac] 				    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:209: エラー: シンボルを見つけられません
+    [javac]       new Condition(() -> aBranch.end() == aNode).ifTrue(() -> { subNodes.add(aBranch.start());});
+    [javac]           ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:212: エラー: 不適合な型: List<Node>をArrayList<Node>に変換できません:
+    [javac]     return this.sortNodes(subNodes);
+    [javac]                          ^
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:223: エラー: シンボルを見つけられません
+    [javac]       new Condition(() -> aBranch.end() == aNode).ifTrue(() -> { superNodes.add(aBranch.start());});
+    [javac]           ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:226: エラー: 不適合な型: List<Node>をArrayList<Node>に変換できません:
+    [javac]     return this.sortNodes(superNodes);
+    [javac]                          ^
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:255: エラー: シンボルを見つけられません
+    [javac] 		ValueHolder<Node> returnValue = new ValueHolder<Node>(null);
+    [javac] 		^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:255: エラー: シンボルを見つけられません
+    [javac] 		ValueHolder<Node> returnValue = new ValueHolder<Node>(null);
+    [javac] 		                                    ^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/Forest.java:261: エラー: シンボルを見つけられません
+    [javac] 				new Condition(() -> aRetangle.contains(aPoint)).ifTrue(() ->
+    [javac] 				    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス Forest
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestController.java:35: エラー: シンボルを見つけられません
+    [javac] 		new Condition(() -> !(aNode == null)).ifTrue(() ->
+    [javac] 		    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestController
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:34: エラー: シンボルを見つけられません
+    [javac] 		ValueHolder<BufferedReader> readStream = new ValueHolder<BufferedReader>(null);
+    [javac] 		^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:34: エラー: シンボルを見つけられません
+    [javac] 		ValueHolder<BufferedReader> readStream = new ValueHolder<BufferedReader>(null);
+    [javac] 		                                             ^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:47: エラー: シンボルを見つけられません
+    [javac] 			new Condition(() -> readStream.get() != null).ifTrue(() ->
+    [javac] 			    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:125: エラー: シンボルを見つけられません
+    [javac] 		ValueHolder<String> string = new ValueHolder<String>(null);
+    [javac] 		^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:125: エラー: シンボルを見つけられません
+    [javac] 		ValueHolder<String> string = new ValueHolder<String>(null);
+    [javac] 		                                 ^
+    [javac]   シンボル:   クラス ValueHolder
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:127: エラー: シンボルを見つけられません
+    [javac] 		new Condition(() ->
+    [javac] 		    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:133: エラー: シンボルを見つけられません
+    [javac] 			new Condition(() ->
+    [javac] 			    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:138: エラー: シンボルを見つけられません
+    [javac] 				new Condition(() ->
+    [javac] 				    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:147: エラー: シンボルを見つけられません
+    [javac] 			new Condition(() ->
+    [javac] 			    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:152: エラー: シンボルを見つけられません
+    [javac] 				new Condition(() ->
+    [javac] 				    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:161: エラー: シンボルを見つけられません
+    [javac] 			new Condition(() ->
+    [javac] 			    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:166: エラー: シンボルを見つけられません
+    [javac] 				new Condition(() ->
+    [javac] 				    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestModel.java:181: エラー: シンボルを見つけられません
+    [javac] 			new Condition(() -> stringArray.length == 2).ifTrue(() ->
+    [javac] 			    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestModel
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestView.java:36: エラー: シンボルを見つけられません
+    [javac] 		new Condition(() -> this.model != null).ifTrue(() ->
+    [javac] 		    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestView
+    [javac] /Users/hayamikenmori/PP/Forest-SE/Forest_Program/forest/ForestView.java:40: エラー: シンボルを見つけられません
+    [javac] 			new Condition(() -> picture != null).ifTrue(() ->
+    [javac] 			    ^
+    [javac]   シンボル:   クラス Condition
+    [javac]   場所: クラス ForestView
+    [javac] エラー63個

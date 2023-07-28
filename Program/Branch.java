@@ -2,24 +2,44 @@ import java.awt.Graphics;
 
 public class Branch extends Object {
 
-	private Node end;
+    private Node end;
 
-	private Node start;
+    private Node start;
 
-	public void draw(Graphics aGraphics) {
+    /**
+     * ブランチを描画するメソッドです
+     * 
+     * @param aGraphics
+     */
+    public void draw(Graphics aGraphics) {
 
-	}
+    }
 
-	public Node end() {
-		return null;
-	}
+    /**
+     * ブランチの終点となるノードを応答するメソッドです
+     * 
+     * @return
+     */
+    public Node end() {
+        return null;
+    }
 
-	public Node start() {
-		return null;
-	}
+    /**
+     * ブランチの始点となるノードを
+     * 
+     * @return
+     */
+    public Node start() {
+        return null;
+    }
 
-	public java.lang.String toString() {
-		return null;
-	}
+    /**
+     * 自分自身を文字列に変換するメソッドです
+     * 
+     * @return
+     */
+    public java.lang.String toString() {
+        return null;
+    }
 
 }
