@@ -290,18 +290,15 @@
   </div>
   <hr>
   <h2>ソフトウェア工学II「樹状整列」テスト仕様書</h2>
-  <div class="belt">
-    <h3><a name="KanseiSaseteKudasai">完成させてください</a></h3>
-  </div>
   <ul>
-    <li><a href="#Example">Example</a>（メインクラス）
-    <li><a href="#Branch">Branch</a>
-    <li><a href="#Constants">Constants</a>
-    <li><a href="#Forest">Forest</a>
-    <li><a href="#ForestController">ForestController</a>
-    <li><a href="#ForestModel">ForestModel</a>
-    <li><a href="#ForestView">ForestView</a>
-    <li><a href="#Node">Node</a>
+    <li><a href="#Example">Example(メインクラス)</a>
+    <li><a href="#Branch">Branch(ブランチ(枝)を担うクラス)</a>
+    <li><a href="#Constants">Constants(リテラルをまとめたクラス)</a>
+    <li><a href="#Forest">Forest(フォレストを担うクラス)</a>
+    <li><a href="#ForestController">ForestController(コントローラを担うクラス)</a>
+    <li><a href="#ForestModel">ForestModel(モデルを担うクラス)</a>
+    <li><a href="#ForestView">ForestView(ビューを担うクラス)</a>
+    <li><a href="#Node">Node(ノード(節)を担うクラス)</a>
   </ul>
   <div class="belt">
     <h3><a name="Example" href="../Program/index.html#Example">Example（メインクラス）</a></h3>
@@ -320,11 +317,25 @@
                 <th class="left-padding" abbr="5">テスト結果</th>
               </tr>
               <tr>
-                <td class="left-padding"><code>なし</code></td>
-                <td class="left-padding"><code>なし</code></td>
-                <td class="left-padding"><code>なし</code></td>
-                <td class="left-padding">なし</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding"><code><a href="../Program/index.html#Example-filePath1Field">filePath1</a></code></td>
+                <td class="left-padding"><code>String</code></td>
+                <td class="left-padding"><code>private static</code></td>
+                <td class="left-padding">tree.txtへのファイルパス</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Example-filePath2Field">filePath2</a></code></td>
+                <td class="left-padding"><code>String</code></td>
+                <td class="left-padding"><code>private static</code></td>
+                <td class="left-padding">forest.txtへのファイルパス</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Example-filePath3Field">filePath3</a></code></td>
+                <td class="left-padding"><code>String</code></td>
+                <td class="left-padding"><code>private static</code></td>
+                <td class="left-padding">semilattice.txtへのファイルパス</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
             </tbody>
           </table>
@@ -347,13 +358,21 @@
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#Example-main">main(String[] arguments)</a></code>
+                  <code><a href="../Program/index.html#Example-main">main(String[] args)</a></code>
                 </td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public static</code></td>
-                <td class="left-padding">第1引数で樹状整列データファイルを受け取って樹状整列を実行</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">第1引数で樹状整列データファイルを受け取って実行の準備を行う</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
+              </tr>
+              <tr>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Example-runForestModel">runForestModel(String aFilePass)</a></code>
+                </td>
+                <td class="left-padding"><code>void</code></td>
+                <td class="left-padding"><code>public static</code></td>
+                <td class="left-padding">樹状整列を実行</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
             </tbody>
           </table>
@@ -362,7 +381,7 @@
     </tbody>
   </table>
   <div class="belt">
-    <h3><a name="Branch" href="../Program/index.html#Branch">Branch</a></h3>
+    <h3><a name="Branch" href="../Program/index.html#Branch">Branch(ブランチ(枝)を担うクラス)</a></h3>
   </div>
   <table summary="table">
     <tbody>
@@ -378,18 +397,18 @@
                 <th class="left-padding" abbr="5">テスト結果</th>
               </tr>
               <tr>
-                <td class="left-padding"><code>end</code></td>
+                <td class="left-padding"><code><a href="../Program/index.html#Branch-startField">start</a></code></td>
                 <td class="left-padding"><code>Node</code></td>
                 <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">ブランチの終点となるノードを記憶するフィールド</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding">ブランチ(枝)の始点となるノード(節)を記憶するフィールド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
-                <td class="left-padding"><code>start</code></td>
+                <td class="left-padding"><code><a href="../Program/index.html#Branch-endField">end</a></code></td>
                 <td class="left-padding"><code>Node</code></td>
                 <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">ブランチの始点となるノードを記憶するフィールド</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding">ブランチ(枝)の終点となるノード(節)を記憶するフィールド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
             </tbody>
           </table>
@@ -417,8 +436,7 @@
                 <td class="left-padding"><code>なし</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">このクラスのインスタンスを生成するコンストラクタ</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -426,25 +444,22 @@
                 </td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ブランチを描画するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code><a href="../Program/index.html#Branch-end">end()</a></code></td>
-                <td class="left-padding"><code>Node</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ブランチの終点となるノードを応答するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">ブランチ(枝)を描画するメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#Branch-start">start()</a></code></td>
                 <td class="left-padding"><code>Node</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ブランチの始点となるノードを応答するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">ブランチ(枝)の始点となるノード(節)を応答するメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Branch-end">end()</a></code></td>
+                <td class="left-padding"><code>Node</code></td>
+                <td class="left-padding"><code>public</code></td>
+                <td class="left-padding">ブランチ(枝)の終点となるノード(節)を応答するメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#Branch-toString">toString()</a></code>
@@ -452,8 +467,7 @@
                 <td class="left-padding"><code>String</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">自分自身を文字列に変換するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
             </tbody>
           </table>
@@ -462,7 +476,7 @@
     </tbody>
   </table>
   <div class="belt">
-    <h3><a name="Constants" href="../Program/index.html#Constants">Constants</a></h3>
+    <h3><a name="Constants" href="../Program/index.html#Constants">Constants(リテラルをまとめたクラス)</a></h3>
   </div>
   <table summary="table">
     <tbody>
@@ -478,88 +492,97 @@
                 <th class="left-padding" abbr="5">テスト結果</th>
               </tr>
               <tr>
-                <td class="left-padding"><code>BackgroundColor</code></td>
-                <td class="left-padding"><code>java.awt.Color</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードを描く際のラベルの背景色を表す</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>DefaultFont</code></td>
-                <td class="left-padding"><code>java.awt.Font</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードを描く際のラベルのフォントを表す</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>ForegroundColor</code></td>
-                <td class="left-padding"><code>java.awt.Color</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードを描く際のラベルの文字色を表す</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>Interval</code></td>
-                <td class="left-padding"><code>Point</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノード群を樹状に整列させる際にノード同士の間隔を表す</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>Mergin</code></td>
-                <td class="left-padding"><code>Point</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードにおいてラベルを描く際の枠縁から余裕を表す</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>SleepTick</code></td>
-                <td class="left-padding"><code>Integer</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">樹状整列アニメーションのスピードを表す</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>TagOfBranches</code></td>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Constants-TagOfTrees">TagOfTrees</a></code></td>
                 <td class="left-padding"><code>String</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">樹状整列データファイル中のタグ「ブランチ」を表す</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>TagOfNodes</code></td>
-                <td class="left-padding"><code>String</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">樹状整列データファイル中のタグ「ノード」を表す</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>TagOfTrees</code></td>
-                <td class="left-padding"><code>String</code></td>
-                <td class="left-padding"><code>public</code></td>
+                <td class="left-padding"><code>public static final</code></td>
                 <td class="left-padding">樹状整列データファイル中のタグ「ツリー」を表す</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
-                <td class="left-padding"><code>UnKnown</code></td>
-                <td class="left-padding"><code>Integer</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノード群を深さ優先にたどる際の状態「未定」を表す</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Constants-TagOfNodes">TagOfNodes</a></code></td>
+                <td class="left-padding"><code>String</code></td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">樹状整列データファイル中のタグ「ノード(節)」を表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
-                <td class="left-padding"><code>UnVisited</code></td>
-                <td class="left-padding"><code>Integer</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノード群を深さ優先にたどる際の状態「未訪問」を表す</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Constants-TagOfBranches">TagOfBranches</a></code></td>
+                <td class="left-padding"><code>String</code></td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">樹状整列データファイル中のタグ「ブランチ(枝)」を表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
-                <td class="left-padding"><code>Visited</code></td>
+              <tr>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Constants-ForegroundColor">ForegroundColor</a></code></td>
+                <td class="left-padding"><code>Color</code></td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">ノード(節)を描く際のラベルの文字色を表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Constants-BackgroundColor">BackgroundColor</a></code></td>
+                <td class="left-padding"><code>Color</code></td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">ノード(節)を描く際のラベルの背景色を表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Constants-DefaultFont">DefaultFont</a></code></td>
+                <td class="left-padding"><code>Font</code></td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">ノード(節)を描く際のラベルのフォントを表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Constants-Mergin">Mergin</a></code></td>
+                <td class="left-padding"><code>Point</code></td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">ノード(節)においてラベルを描く際の枠縁から余裕を表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Constants-Interval">Interval</a></code>
+                </td>
+                <td class="left-padding"><code>Point</code></td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">ノード(節)群を樹状に整列させる際にノード(節)同士の間隔を表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Constants-UnKnown">UnKnown</a></code></td>
                 <td class="left-padding"><code>Integer</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノード群を深さ優先にたどる際の状態「訪問済」を表す</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">ノード(節)群を深さ優先にたどる際の状態「未定」を表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Constants-UnVisited">UnVisited</a></code>
+                </td>
+                <td class="left-padding"><code>Integer</code></td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">ノード(節)群を深さ優先にたどる際の状態「未訪問」を表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Constants-Visited">Visited</a></code></td>
+                <td class="left-padding"><code>Integer</code></td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">ノード(節)群を深さ優先にたどる際の状態「訪問済」を表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Constants-SleepTick">SleepTick</a></code>
+                </td>
+                <td class="left-padding"><code>Integer</code></td>
+                <td class="left-padding"><code>public static final</code></td>
+                <td class="left-padding">樹状整列アニメーションのスピードを表す</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
             </tbody>
           </table>
@@ -581,11 +604,13 @@
                 <th class="left-padding" abbr="5">テスト結果</th>
               </tr>
               <tr>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Constants-Constants">Constants()</a></code>
+                </td>
                 <td class="left-padding"><code>なし</code></td>
-                <td class="left-padding"><code>なし</code></td>
-                <td class="left-padding"><code>なし</code></td>
-                <td class="left-padding">なし</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding"><code>public</code></td>
+                <td class="left-padding">このクラスのインスタンスを生成するコンストラクタ</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
             </tbody>
           </table>
@@ -594,7 +619,7 @@
     </tbody>
   </table>
   <div class="belt">
-    <h3><a name="Forest" href="../Program/index.html#Forest">Forest</a></h3>
+    <h3><a name="Forest" href="../Program/index.html#Forest">Forest(フォレストを担うクラス)</a></h3>
   </div>
   <table summary="table">
     <tbody>
@@ -610,25 +635,25 @@
                 <th class="left-padding" abbr="5">テスト結果</th>
               </tr>
               <tr>
-                <td class="left-padding"><code>bounds</code></td>
+                <td class="left-padding"><code><a href="../Program/index.html#Forest-nodesField">nodes</a></code></td>
+                <td class="left-padding"><code>List&lt;Node&gt;</code></td>
+                <td class="left-padding"><code>private</code></td>
+                <td class="left-padding">ノード(節)群を記憶するフィールド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Forest-branchesField">branches</a></code></td>
+                <td class="left-padding"><code>List&lt;Branch&gt;</code></td>
+                <td class="left-padding"><code>private</code></td>
+                <td class="left-padding">ブランチ(枝)群を記憶するフィールド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Forest-boundsField">bounds</a></code></td>
                 <td class="left-padding"><code>Rectangle</code></td>
                 <td class="left-padding"><code>private</code></td>
                 <td class="left-padding">樹状整列したフォレストの領域を記憶するフィールド</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>branches</code></td>
-                <td class="left-padding"><code>ArrayList<Branch></code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">ブランチ群を記憶するフィールド</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>nodes</code></td>
-                <td class="left-padding"><code>ArrayList<Node></code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">ノード群を記憶するフィールド</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
             </tbody>
           </table>
@@ -648,6 +673,15 @@
                 <th class="left-padding" abbr="3">分類</th>
                 <th class="left-padding" abbr="4">説明</th>
                 <th class="left-padding" abbr="5">テスト結果</th>
+              </tr>
+              <tr>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Forest-Forest">Forest()</a></code>
+                </td>
+                <td class="left-padding"><code>なし</code></td>
+                <td class="left-padding"><code>public</code></td>
+                <td class="left-padding">このクラスのインスタンスを生成するコンストラクタ</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -655,9 +689,8 @@
                 </td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ブランチを追加するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">ブランチ(枝)を追加するメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -665,17 +698,24 @@
                 </td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードを追加するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">ノード(節)を追加するメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#Forest-arrange">arrange()</a></code></td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">樹状整列する最上位のメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
+              </tr>
+              <tr>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Forest-arrange2">arrange(ForestModel aModel)</a></code>
+                </td>
+                <td class="left-padding"><code>void</code></td>
+                <td class="left-padding"><code>piblic</code></td>
+                <td class="left-padding">樹状整列する2番階層のメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -684,16 +724,14 @@
                 <td class="left-padding"><code>Point</code></td>
                 <td class="left-padding"><code>protected</code></td>
                 <td class="left-padding">樹状整列するN番階層のメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#Forest-bounds">bounds()</a></code></td>
                 <td class="left-padding"><code>Rectangle</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">フォレストの領域を応答するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -702,8 +740,7 @@
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">フォレストを描画するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -712,8 +749,7 @@
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">フォレストの領域を水に流すメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -722,47 +758,42 @@
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>protected</code></td>
                 <td class="left-padding">チックタックの間、スリープし、モデルが変化したと知らせるメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#Forest-rootNodes">rootNodes()</a></code>
                 </td>
-                <td class="left-padding"><code>java.util.ArrayList<Node></code></td>
+                <td class="left-padding"><code>List&lt;Node&gt;</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">フォレストの根元となるノード群を応答するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">フォレストの根元となるノード(節)群を応答するメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#Forest-sortNodes">sortNodes(java.util.ArrayList<Node> nodeCollection)</a></code>
+                  <code><a href="../Program/index.html#Forest-sortNodes">sortNodes(List&lt;Node&gt; nodeCollection)</a></code>
                 </td>
-                <td class="left-padding"><code>java.util.ArrayList<Node></code></td>
+                <td class="left-padding"><code>List&lt;Node&gt;</code></td>
                 <td class="left-padding"><code>protected</code></td>
-                <td class="left-padding">引数で指定されたノード群をノード名でソートするメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">引数で指定されたノード(節)群をノード(節)名でソートするメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
                   <code><a href="../Program/index.html#Forest-subNodes">subNodes(Node aNode)</a></code>
                 </td>
-                <td class="left-padding"><code>java.util.ArrayList<Node></code></td>
+                <td class="left-padding"><code>List&lt;Node&gt;</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">引数で指定されたノードのサブノード群を応答するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">引数で指定されたノード(節)のサブノード(節)群を応答するメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
                   <code><a href="../Program/index.html#Forest-superNodes">superNodes(Node aNode)</a></code>
                 </td>
-                <td class="left-padding"><code>java.util.ArrayList<Node></code></td>
+                <td class="left-padding"><code>List&lt;Node&gt;</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">引数で指定されたノードのスーパーノード群を応答するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">引数で指定されたノード(節)のスーパーノード(節)群を応答するメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#Forest-toString">toString()</a></code>
@@ -770,8 +801,7 @@
                 <td class="left-padding"><code>String</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">自分自身を文字列に変換するメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -779,9 +809,8 @@
                 </td>
                 <td class="left-padding"><code>Node</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">定された位置にノードが存在するかを調べるメソッド</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
+                <td class="left-padding">指定された位置にノード(節)が存在するかを調べるメソッド</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
             </tbody>
           </table>
@@ -790,7 +819,7 @@
     </tbody>
   </table>
   <div class="belt">
-    <h3><a name="ForestController" href="../Program/index.html#ForestController">ForestController</a></h3>
+    <h3><a name="ForestController" href="../Program/index.html#ForestController">ForestController(コントローラを担うクラス)</a></h3>
   </div>
   <table summary="table">
     <tbody>
@@ -806,31 +835,10 @@
                 <th class="left-padding" abbr="5">テスト結果</th>
               </tr>
               <tr>
-                <td class="left-padding"><code>current</code></td>
-                <td class="left-padding"><code>Point</code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">マウスの現在の位置を記憶するフィールド</td>
+                <td class="left-padding"><code>なし</code></td>
+                <td class="left-padding"><code>なし</code></td>
+                <td class="left-padding"><code>なし</code></td>
                 <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>model</code></td>
-                <td class="left-padding"><code>ForestModel</code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">樹状整列におけるMVCのモデルを記憶するフィールド</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>previous</code></td>
-                <td class="left-padding"><code>Point</code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">マウスの直近の位置を記憶するフィールド</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>Fview</code></td>
-                <td class="left-padding"><code>orestView</code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">樹状整列におけるMVCのビュー（V）を記憶するフィールド</td>
                 <td class="left-padding">なし</td>
               </tr>
             </tbody>
@@ -851,6 +859,15 @@
                 <th class="left-padding" abbr="3">分類</th>
                 <th class="left-padding" abbr="4">説明</th>
                 <th class="left-padding" abbr="5">テスト結果</th>
+              </tr>
+              <tr>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#ForestController-ForestController">ForestController()</a></code>
+                </td>
+                <td class="left-padding"><code>なし</code></td>
+                <td class="left-padding"><code>public</code></td>
+                <td class="left-padding">このクラスのインスタンスを生成するコンストラクタ</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -858,109 +875,8 @@
                 </td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">マウスのボタンをクリックしたときに動作するメソッド。 クリックした位置からノードを割り出す。</td>
-                <td class="left-padding">バグ（2010年7月21日）</td>
-                <td class="left-padding">良好（2010年7月21日）</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestController-mouseDragged">mouseDragged(MouseEvent aMouseEvent)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">マウスドラッグしたときに動作するメソッド。直近の位置と現在の位置から移動量を割り出してスクロールする。</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestController-mouseEntered">mouseEntered(MouseEvent aMouseEvent)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">マウスがウィンドウに入ったときに操作するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestController-mouseMoved">mouseMoved(MouseEvent aMouseEvent)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">マウスがウィンドウに出たときに動作するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestController-mousePressed">mousePressed(MouseEvent aMouseEvent)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">マウスのボタンが押されたときに動作するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestController-mouseReleased">mouseReleased(MouseEvent aMouseEvent)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">マウスのボタンが離されたときに操作するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestController-mouseWheelMoved">mouseWheelMoved(MouseEvent aMouseEvent)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">マウスのホイールが回されたときに動作するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestController-mouseExited">mouseExited(MouseEvent aMouseEvent)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">マウスがウィンドウに出たときに動作するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestController-setModel">setModel(ForestModel aModel)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">モデルを設定するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestController-setView">setView(ForestView aView)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ビューをセットするメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestController-toString">toString()</a></code>
-                </td>
-                <td class="left-padding"><code>String</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">自分自身を文字列に変換するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">マウスのボタンをクリックしたときに動作するメソッド。 クリックした位置からノード(節)を割り出す。</td>
+                <td class="left-padding">良好（2023年7月28日）</td>
               </tr>
             </tbody>
           </table>
@@ -969,7 +885,7 @@
     </tbody>
   </table>
   <div class="belt">
-    <h3><a name="ForestModel" href="../Program/index.html#ForestModel">ForestModel</a></h3>
+    <h3><a name="ForestModel" href="../Program/index.html#ForestModel">ForestModel(モデルを担うクラス)</a></h3>
   </div>
   <table summary="table">
     <tbody>
@@ -985,25 +901,11 @@
                 <th class="left-padding" abbr="5">テスト結果</th>
               </tr>
               <tr>
-                <td class="left-padding"><code>dependents</code></td>
-                <td class="left-padding"><code>java.util.ArrayList<ForestView></code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">自分の依存物（ビューたち）を記憶しておくフィールド</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>forest</code></td>
+                <td class="left-padding"><code><a href="../Program/index.html#ForestModel-forestField">forest</a></code></td>
                 <td class="left-padding"><code>Forest</code></td>
                 <td class="left-padding"><code>private</code></td>
                 <td class="left-padding">樹状整列それ自身を記憶しておくフィールド</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>picture</code></td>
-                <td class="left-padding"><code>java.awt.image.BufferedImage</code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">樹状整列それ自身を画像にして記憶しておくフィールド</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
             </tbody>
           </table>
@@ -1023,6 +925,14 @@
                 <th class="left-padding" abbr="3">分類</th>
                 <th class="left-padding" abbr="4">説明</th>
                 <th class="left-padding" abbr="5">テスト結果</th>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#ForestModel-ForestModel">ForestModel(File aFile)</a></code>
+                </td>
+                <td class="left-padding"><code>なし</code></td>
+                <td class="left-padding"><code>public</code></td>
+                <td class="left-padding">樹状整列データファイルを読み込んで、樹状整列させるメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#ForestModel-animate">animate()</a></code>
@@ -1030,18 +940,7 @@
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">アニメーションを行うメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestModel-addDependent">addDependent(ForestView aView)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">依存するビューを依存物に登録するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#ForestModel-arrange">arrange()</a></code>
@@ -1049,8 +948,7 @@
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">樹状整列を行うメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#ForestModel-changed">changed()</a></code>
@@ -1058,8 +956,7 @@
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">自分自身が変化したことを依存物たちに放送するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#ForestModel-forest">forest()</a></code>
@@ -1067,53 +964,38 @@
                 <td class="left-padding"><code>Forest</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">樹状整列それ自身を応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
-                <td class="left-padding"><code><a href="../Program/index.html#ForestModel-picture">picture()</a></code>
+                <td class="left-padding"><code><a href="../Program/index.html#ForestModel-read">read(BufferedReader readStream)</a></code>
                 </td>
-                <td class="left-padding"><code>java.awt.image.BufferedImage</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">樹状整列それ自身を画像化したものを応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding"><code>void</code></td>
+                <td class="left-padding"><code>protected</code></td>
+                <td class="left-padding">樹状整列データファイルから樹状整列それ自身を生成するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestModel-read">read(java.io.File aFile)</a></code>
+                  <code><a href="../Program/index.html#ForestModel-readLine">readLine(BufferedReader readStream)</a></code>
                 </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">樹状整列データファイルから樹状整列それ自身を生成するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding"><code>String</code></td>
+                <td class="left-padding"><code>protected</code></td>
+                <td class="left-padding">樹状整列データファイルストリームから1行分を読み出して応答するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#ForestModel-root">root()</a></code></td>
                 <td class="left-padding"><code>Node</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">樹状整列の根元になるノードを探し出して応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestModel-toString">toString()</a></code>
-                </td>
-                <td class="left-padding"><code>java.lang.String</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">自分自身を文字列に変換するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">樹状整列の根元になるノード(節)を探し出して応答するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#ForestModel-roots">roots()</a></code></td>
-                <td class="left-padding"><code>java.util.ArrayList&lt;Node&gt;</code></td>
+                <td class="left-padding"><code>List&lt;Node&gt;</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">樹状整列の根元となるノードたちを探し出して応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">樹状整列の根元となるノード(節)たちを探し出して応答するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
             </tbody>
           </table>
@@ -1122,7 +1004,7 @@
     </tbody>
   </table>
   <div class="belt">
-    <h3><a name="ForestView" href="../Program/index.html#ForestView">ForestView</a></h3>
+    <h3><a name="ForestView" href="../Program/index.html#ForestView">ForestView(ビューを担うクラス)</a></h3>
   </div>
   <table summary="table">
     <tbody>
@@ -1138,24 +1020,10 @@
                 <th class="left-padding" abbr="5">テスト結果</th>
               </tr>
               <tr>
-                <td class="left-padding"><code>controller</code></td>
-                <td class="left-padding"><code>ForestController</code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">樹状整列におけるMVCのコントローラ（C）を記憶するフィールド</td>
+                <td class="left-padding"><code>なし</code></td>
+                <td class="left-padding"><code>なし</code></td>
+                <td class="left-padding"><code>なし</code></td>
                 <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>model</code></td>
-                <td class="left-padding"><code>ForestModel</code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">樹状整列におけるMVCのモデル（M）を記憶するフィールド</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>offset</code></td>
-                <td class="left-padding"><code>Point</code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">スクロール量（どこから描き出すのかを表す座標）を記憶するフィールド</td>
                 <td class="left-padding">なし</td>
               </tr>
             </tbody>
@@ -1176,6 +1044,15 @@
                 <th class="left-padding" abbr="3">分類</th>
                 <th class="left-padding" abbr="4">説明</th>
                 <th class="left-padding" abbr="5">テスト結果</th>
+              </tr>
+              <tr>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#ForestView-ForestView">ForestView(ForestModel aModel)</a></code>
+                </td>
+                <td class="left-padding"><code>なし</code></td>
+                <td class="left-padding"><code>public</code></td>
+                <td class="left-padding">このクラスのインスタンスを生成するコンストラクタ</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -1184,48 +1061,7 @@
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">このパネルの描画が必要になったときに動作するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestView-scrollBy">scrollBy(Point aPoint)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">相対スクロールを行うメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestView-scrollTo">scrollTo(Point aPoint)</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">絶対スクロールを行うメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestView-toString">toString()</a></code>
-                </td>
-                <td class="left-padding"><code>String</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">自分自身を文字列に変換するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
-              </tr>
-              <tr>
-                <td class="left-padding">
-                  <code><a href="../Program/index.html#ForestView-update">update()</a></code>
-                </td>
-                <td class="left-padding"><code>void</code></td>
-                <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">依存物として依存するものからの放送を受けたときに動作するメソッド。その際には再描画します</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -1233,9 +1069,8 @@
                 </td>
                 <td class="left-padding"><code>Node</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">指定された位置にノードが存在するかを調べるメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">指定された位置にノード(節)が存在するかを調べるメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
 
             </tbody>
@@ -1245,7 +1080,7 @@
     </tbody>
   </table>
   <div class="belt">
-    <h3><a name="Node" href="../Program/index.html#Node">Node</a></h3>
+    <h3><a name="Node" href="../Program/index.html#Node">Node(ノード(節)を担うクラス)</a></h3>
   </div>
   <table summary="table">
     <tbody>
@@ -1261,32 +1096,32 @@
                 <th class="left-padding" abbr="5">テスト結果</th>
               </tr>
               <tr>
-                <td class="left-padding"><code>extent</code></td>
-                <td class="left-padding"><code>Point</code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">ノードの大きさ（幅と高さ）を記憶するフィールド</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>location</code></td>
-                <td class="left-padding"><code>Point</code></td>
-                <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">ノードの場所（位置：座標）を記憶するフィールド</td>
-                <td class="left-padding">なし</td>
-              </tr>
-              <tr>
-                <td class="left-padding"><code>name</code></td>
+                <td class="left-padding"><code><a href="../Program/index.html#Node-nameField">name</a></code></td>
                 <td class="left-padding"><code>String</code></td>
                 <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">ノード名：ラベル文字列を記憶するフィールド</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding">ノード(節)名：ラベル文字列を記憶するフィールド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
-                <td class="left-padding"><code>status</code></td>
+                <td class="left-padding"><code><a href="../Program/index.html#Node-locationField">location</a></code></td>
+                <td class="left-padding"><code>Point</code></td>
+                <td class="left-padding"><code>private</code></td>
+                <td class="left-padding">ノード(節)の場所（位置：座標）を記憶するフィールド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Node-extentField">extent</a></code></td>
+                <td class="left-padding"><code>Point</code></td>
+                <td class="left-padding"><code>private</code></td>
+                <td class="left-padding">ノード(節)の大きさ（幅と高さ）を記憶するフィールド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding"><code><a href="../Program/index.html#Node-statusField">status</a></code></td>
                 <td class="left-padding"><code>Integer</code></td>
                 <td class="left-padding"><code>private</code></td>
-                <td class="left-padding">樹状整列する際のノードの状態を記憶するフィールド</td>
-                <td class="left-padding">なし</td>
+                <td class="left-padding">樹状整列する際のノード(節)の状態を記憶するフィールド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
             </tbody>
           </table>
@@ -1309,84 +1144,92 @@
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#Node-draw">draw(Graphics aGraphics)</a></code></td>
+                  <code><a href="../Program/index.html#Node-Node">Node(String aString)</a></code>
+                </td>
+                <td class="left-padding"><code>なし</code></td>
+                <td class="left-padding"><code>public</code></td>
+                <td class="left-padding">このクラスのインスタンスを生成するコンストラクタ</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
+              </tr>
+              <tr>
+                <td class="left-padding">
+                  <code><a href="../Program/index.html#Node-draw">draw(Graphics aGraphics)</a></code>
+                </td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードを描画するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">ノード(節)を描画するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#Node-getBounds">getBounds()</a></code></td>
+                  <code><a href="../Program/index.html#Node-getBounds">getBounds()</a></code>
+                </td>
                 <td class="left-padding"><code>Rectangle</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードの描画領域を応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">ノード(節)の描画領域を応答するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#Node-getExtent">getExtent()</a></code></td>
+                  <code><a href="../Program/index.html#Node-getExtent">getExtent()</a></code>
+                </td>
                 <td class="left-padding"><code>Point</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードの大きさを応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">ノード(節)の大きさを応答するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#Node-getLocation">getLocation()</a></code></td>
+                  <code><a href="../Program/index.html#Node-getLocation">getLocation()</a></code>
+                </td>
                 <td class="left-padding"><code>Point</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードの位置を応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">ノード(節)の位置を応答するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#Node-getName">getName()</a></code>
                 </td>
                 <td class="left-padding"><code>String</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードの名前を応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">ノード(節)の名前を応答するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#Node-getStatus">getStatus()</a></code></td>
+                  <code><a href="../Program/index.html#Node-getStatus">getStatus()</a></code>
+                </td>
                 <td class="left-padding"><code>Integer</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードの状態を応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">ノード(節)の状態を応答するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#Node-setExtent">setExtent(Point aPoint)</a></code></td>
+                  <code><a href="../Program/index.html#Node-setExtent">setExtent(Point aPoint)</a></code>
+                </td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードの大きさを設定するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">ノード(節)の大きさを設定するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#Node-setLocation">setLocation(Point aPoint)</a></code></td>
+                  <code><a href="../Program/index.html#Node-setLocation">setLocation(Point aPoint)</a></code>
+                </td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードの位置を設定するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">ノード(節)の位置を設定するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
-                  <code><a href="../Program/index.html#Node-setName">setName(String aString)</a></code></td>
+                  <code><a href="../Program/index.html#Node-setName">setName(String aString)</a></code>
+                </td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードの名前を設定するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">ノード(節)の名前を設定するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -1394,9 +1237,8 @@
                 </td>
                 <td class="left-padding"><code>void</code></td>
                 <td class="left-padding"><code>public</code></td>
-                <td class="left-padding">ノードの状態を設定するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">ノード(節)の状態を設定するメソッド</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -1405,8 +1247,7 @@
                 <td class="left-padding"><code>int</code></td>
                 <td class="left-padding"><code>protected</code></td>
                 <td class="left-padding">文字列の高さを応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding">
@@ -1415,8 +1256,7 @@
                 <td class="left-padding"><code>int</code></td>
                 <td class="left-padding"><code>protected</code></td>
                 <td class="left-padding">文字列の幅を応答するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
               <tr>
                 <td class="left-padding"><code><a href="../Program/index.html#Node-toString">toString()</a></code>
@@ -1424,13 +1264,12 @@
                 <td class="left-padding"><code>String</code></td>
                 <td class="left-padding"><code>public</code></td>
                 <td class="left-padding">自分自身を文字列に変換するメソッド</td>
-                <td class="left-padding">-</td>
-                <td class="left-padding">-</td>
+                <td class="left-padding">良好(2023年7月28日)</td>
               </tr>
-    </tbody>
-  </table>
-  <hr>
-  <div class="right-small">Copyright 20xx Project xx, Updated: 2017/03/13 (Created: 2009/11/11)</div>
+            </tbody>
+          </table>
+          <hr>
+          <div class="right-small">Copyright 2023 Project Forest, Updated: 2023/7/28 (Created: 2023/5/30)</div>
 </body>
 
 </html>
