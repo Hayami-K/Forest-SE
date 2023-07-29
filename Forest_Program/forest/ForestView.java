@@ -8,9 +8,7 @@ import mvc.View;
 import condition.Condition;
 
 /**
- * 樹状整列におけるMVCのビュー（V）を担うクラスになります。
- * 作者：青木淳（AOKI Atsushi）
- * 修正日（作成日）：2022-07-08（2008-11-11）
+ * 樹状整列におけるMVCのビュー（V）を担うクラス
  */
 @SuppressWarnings("serial")
 public class ForestView extends View

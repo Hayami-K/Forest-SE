@@ -10,9 +10,7 @@ import condition.Condition;
 import condition.ValueHolder;
 
 /**
- * 樹状整列におけるフォレスト（木・林・森・亜格子状の森）を担うクラスになります。
- * 作者：青木淳（AOKI Atsushi）
- * 修正日（作成日）：2022-07-08（2008-11-11）
+ * 樹状整列におけるフォレスト（木・林・森・亜格子状の森）を担うクラス
  */
 public class Forest extends Object
 {

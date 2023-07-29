@@ -6,9 +6,7 @@ import java.awt.Point;
 import java.awt.RenderingHints;
 
 /**
- * 樹状整列におけるブランチ（枝）を担うクラスになります。
- * 作者：青木淳（AOKI Atsushi）
- * 修正日（作成日）：2022-07-08（2008-11-11）
+ * 樹状整列におけるブランチ（枝）を担うクラス
  */
 public class Branch extends Object
 {

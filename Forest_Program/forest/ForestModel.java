@@ -17,9 +17,7 @@ import condition.Condition;
 import condition.ValueHolder;
 
 /**
- * 樹状整列におけるMVCのモデル（M）を担うクラスになります。
- * 作者：青木淳（AOKI Atsushi）
- * 修正日（作成日）：2022-07-08（2008-11-11）
+ * 樹状整列におけるMVCのモデル（M）を担うクラス
  */
 public class ForestModel extends Model
 {
