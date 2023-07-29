@@ -249,9 +249,175 @@ th {
 <hr>
 <h2>ソフトウェア工学II「樹状整列」マニュアル</h2>
 <div class="belt">
-<h3><a name="KanseiSaseteKudasai">完成させてください</a></h3>
+<h3><a name="install">インストール</a></h3>
 </div>
+<ol>
+<li>Forest_Program.zipを適当な場所に展開する。
+<pre class="belt">
+  $ unzip Forest_Program.zip 
+Archive:  Forest_Program.zip
+   creating: Forest_Program/
+   creating: Forest_Program/Forest.app/
+   creating: Forest_Program/forest/
+  inflating: Forest_Program/.DS_Store  
+  inflating: Forest_Program/build.xml  
+   creating: Forest_Program/Classes/
+  inflating: Forest_Program/Makefile  
+   creating: Forest_Program/resources/
+  inflating: Forest_Program/forest.jar  
+  inflating: Forest_Program/errer.txt  
+  inflating: Forest_Program/mvc.jar  
+   creating: Forest_Program/resource/
+  inflating: Forest_Program/forest.mf  
+  inflating: Forest_Program/condition.jar  
+   creating: Forest_Program/Forest.app/Contents/
+  inflating: Forest_Program/forest/ForestView.java  
+  inflating: Forest_Program/forest/Node.java  
+  inflating: Forest_Program/forest/ForestController.java  
+  inflating: Forest_Program/forest/Branch.java  
+  inflating: Forest_Program/forest/Example.java  
+  inflating: Forest_Program/forest/ForestModel.java  
+  inflating: Forest_Program/forest/Forest.java  
+  inflating: Forest_Program/forest/Constants.java  
+   creating: Forest_Program/Classes/forest/
+  inflating: Forest_Program/resources/Forest.icns  
+   creating: Forest_Program/resources/data/
+  inflating: Forest_Program/resource/Forest.icns  
+   creating: Forest_Program/resource/data/
+   creating: Forest_Program/Forest.app/Contents/MacOS/
+   creating: Forest_Program/Forest.app/Contents/Resources/
+  inflating: Forest_Program/Forest.app/Contents/Info.plist  
+  inflating: Forest_Program/Forest.app/Contents/PkgInfo  
+  inflating: Forest_Program/Classes/forest/Constants.class  
+  inflating: Forest_Program/Classes/forest/Branch.class  
+  inflating: Forest_Program/Classes/forest/ForestView.class  
+  inflating: Forest_Program/Classes/forest/Example.class  
+  inflating: Forest_Program/Classes/forest/Forest.class  
+  inflating: Forest_Program/Classes/forest/ForestController.class  
+  inflating: Forest_Program/Classes/forest/ForestModel.class  
+  inflating: Forest_Program/Classes/forest/Example$3.class  
+  inflating: Forest_Program/Classes/forest/Example$1.class  
+  inflating: Forest_Program/Classes/forest/Node.class  
+  inflating: Forest_Program/Classes/forest/Example$2.class  
+  inflating: Forest_Program/resources/data/forest.txt  
+  inflating: Forest_Program/resources/data/semilattice.txt  
+  inflating: Forest_Program/resources/data/tree.txt  
+  inflating: Forest_Program/resource/data/forest.txt  
+  inflating: Forest_Program/resource/data/semilattice.txt  
+  inflating: Forest_Program/resource/data/tree.txt  
+  inflating: Forest_Program/Forest.app/Contents/MacOS/applet  
+  inflating: Forest_Program/Forest.app/Contents/Resources/JavaApp.icns  
+  inflating: Forest_Program/Forest.app/Contents/Resources/applet.rsrc  
+   creating: Forest_Program/Forest.app/Contents/Resources/description.rtfd/
+   creating: Forest_Program/Forest.app/Contents/Resources/Java/
+   creating: Forest_Program/Forest.app/Contents/Resources/Scripts/
+  inflating: Forest_Program/Forest.app/Contents/Resources/Forest.icns  
+  inflating: Forest_Program/Forest.app/Contents/Resources/applet.icns  
+  inflating: Forest_Program/Forest.app/Contents/Resources/description.rtfd/TXT.rtf  
+  inflating: Forest_Program/Forest.app/Contents/Resources/Java/forest.txt  
+  inflating: Forest_Program/Forest.app/Contents/Resources/Java/forest.jar  
+  inflating: Forest_Program/Forest.app/Contents/Resources/Scripts/main.scpt 
+  </pre>
+<li>展開して得られるForest_Programというディレクトリへ移る。
+  <pre class = "belt">
+    $ cd Forest_Program
+    $ pwd
+    /Users/username/Forest_Program
+    </pre>
+<li>中身を確認する。
+  <pre class="belt">
+$ ls *
+Makefile	condition.jar	forest.jar	mvc.jar
+build.xml	errer.txt	forest.mf
+
+Classes:
+forest
+
+Forest.app:
+Contents
+
+forest:
+Branch.java		Forest.java		ForestView.java
+Constants.java		ForestController.java	Node.java
+Example.java		ForestModel.java
+
+resource:
+Forest.icns	data
+
+resources:
+Forest.icns	data
+</pre>
+<li>makeする。
+  <pre class="belt">
+$ make
+env LC_ALL=ja_JP.UTF-8 ant all
+Picked up _JAVA_OPTIONS: -Dfile.encoding=UTF-8
+Buildfile: /Users/hibitomoki/Forest_Program/build.xml
+
+prepare:
+     [exec] 2023年 7月29日 土曜日 13時03分52秒 JST
+
+compile:
+     [exec] 2023年 7月29日 土曜日 13時03分52秒 JST
+
+jar:
+      [jar] Building jar: /Users/hibitomoki/Forest_Program/forest.jar
+     [exec] 2023年 7月29日 土曜日 13時03分52秒 JST
+
+all:
+     [exec] 2023年 7月29日 土曜日 13時03分52秒 JST
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+</pre>
+<li>forest.jarが生成されていることを確かめる。
+  <pre class="belt">
+$ ls forest.jar
+forest.jar
+</pre>
+<li>生成したforest.jarをアプリケーション(Forest.app)の中にインストールする。
+  <pre class="belt">
+$ make install
+env LC_ALL=ja_JP.UTF-8 ant install
+Picked up _JAVA_OPTIONS: -Dfile.encoding=UTF-8
+Buildfile: /Users/hibitomoki/Forest_Program/build.xml
+
+prepare:
+     [exec] 2023年 7月29日 土曜日 13時09分28秒 JST
+
+compile:
+     [exec] 2023年 7月29日 土曜日 13時09分28秒 JST
+
+jar:
+     [exec] 2023年 7月29日 土曜日 13時09分28秒 JST
+
+all:
+     [exec] 2023年 7月29日 土曜日 13時09分28秒 JST
+
+install:
+     [copy] Copying 1 file to /Users/hibitomoki/Forest_Program/Forest.app/Contents/Resources/Java
+     [exec] 2023年 7月29日 土曜日 13時09分28秒 JST
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+</pre>
+  </ol>
+  <div class="belt">
+<h3><a name="Execution">実行方法</a>(実行ファイルの動かし方)</h3>
+</div>
+実行するためのコマンドは以下の通りである。<br>
+<blockquote><code>$java -jar forest.jar</code></blockquote>
+また、openコマンドでforest.jarを開くことでも実行可能である。<br>
+<blockquote><code>$open forest.jar</code></blockquote>
+フォルダより、forest.jarをダブルクリックしても実行可能である。
+<div class="belt">
+<h3><a name="do">実行画面</a></h3>
+</div>
+以下に実行例を示す。
+<img src = "execution.png" width="100%">
+このように、一つのウィンドウが開き、3つのボタンからどのファイルを動かすかを選ぶことができる。<br>
+上から順に、単一の木構造、複数の木構造、枝分かれしたものが接合している木構造の３つを選べる。
 <hr>
-<div class="right-small">Copyright 20xx Project xx, Updated: 2017/03/13 (Created: 2009/11/11)</div>
+<div class="right-small">Copyright 2023 Project Forest, Updated: 2023/7/29 (Created: 2023/5/30)</div>
 </body>
 </html>
